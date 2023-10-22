@@ -1,0 +1,139 @@
+@keyframes fade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+body{
+    background-color: #00bf7d;
+    color: black;
+    margin: 12px;
+    max-width: 100%;
+    animation: fade 1s ease-in;
+}
+
+h1{
+    font-size: 60pt;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+h2{
+    font-size: 40pt;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h3{
+    font-size: 30pt;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+p{
+    line-height: normal;
+}
+
+nav{
+    border: 2px solid black;
+    text-align: center;
+    padding: 25px;
+    color: white;
+    margin: 0%;
+}
+
+nav a{
+    display: inline;
+    background-color: black;
+    padding: 5px;
+    margin: 20px;
+}
+
+.skip{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    color: blue;
+    text-decoration: underline;
+}
+
+#current{
+    padding: 15px;
+    color: black;
+    background-color: aliceblue;
+    border-radius: 20px;
+}
+
+.gallery > div {
+    display: grid;
+    grid-template-columns: 100%;
+    place-items: center;
+}
+
+img, video{
+    border: 5px solid;
+    border-color: blue;
+    padding: 5px;
+    border-radius: 30px;
+    grid-column: 1/-1;
+    width: 85%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.thumbnail{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+ul{
+    margin-left: 12px;
+    list-style-type: square;
+}
+
+ol{
+    margin-left: 12px;
+    list-style-type: decimal;
+}
+
+nav > ul{
+    display: inline-block;
+    list-style-type: none;
+}
+
+#gif{
+    display: block;
+}
+
+#still_image{
+    display: none;
+}
+
+@media (prefers-reduced-motion: reduce){
+    body{
+        animation: none;
+    }
+    #gif{
+        display: none;
+    }
+    #still_image{
+        display: block;
+    }
+}
