@@ -23,8 +23,8 @@ h1{
 
 h2{
     font-size: 40pt;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: rgb(255, 255, 255);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -32,7 +32,7 @@ h2{
 h3{
     font-size: 30pt;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: rgb(255, 255, 255);
+    color: black;
     text-align: center;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -47,14 +47,16 @@ nav{
     text-align: center;
     padding: 25px;
     color: white;
-    margin: 0%;
+    margin: none;
 }
 
 nav a{
     display: inline;
     background-color: black;
-    padding: 5px;
-    margin: 20px;
+}
+
+nav > ul > li{
+    display: inline-block;
 }
 
 .skip{
@@ -118,11 +120,11 @@ nav > ul{
     list-style-type: none;
 }
 
-#gif{
+.gif{
     display: block;
 }
 
-#still_image{
+.still_image{
     display: none;
 }
 
@@ -130,10 +132,10 @@ nav > ul{
     body{
         animation: none;
     }
-    #gif{
+    .gif{
         display: none;
     }
-    #still_image{
+    .still_image{
         display: block;
     }
 }
