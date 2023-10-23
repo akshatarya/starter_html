@@ -55,8 +55,22 @@ nav a{
     background-color: black;
 }
 
-nav > ul > li{
-    display: inline-block;
+nav > ul{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    list-style-type: none;
+}
+
+#travel{
+    grid-column: 1/2;
+}
+
+#pets{
+    grid-column: 2/3;
+}
+
+#recipes{
+    grid-column: 3/-1;
 }
 
 .skip{
@@ -76,7 +90,7 @@ nav > ul > li{
     text-decoration: underline;
 }
 
-#current{
+.current{
     padding: 15px;
     color: black;
     background-color: aliceblue;
@@ -115,10 +129,10 @@ ol{
     list-style-type: decimal;
 }
 
-nav > ul{
+/* nav > ul{
     display: inline-block;
     list-style-type: none;
-}
+} */
 
 .gif{
     display: block;
