@@ -19,14 +19,42 @@
         </ul>
     </nav>
 
+    <div id = "button">
+        <button id="playButton" onClick="playPause()">
+            <audio src="music/In_The_Peak_Bar.mp3" loop></audio>
+            Play/Pause Music
+        </button>
+    </div>
+
+    <script>
+        let aud = document.getElementById("playButton").children[0];
+        let isPlaying = false;
+        aud.pause();
+      
+        function playPause() {
+          if (isPlaying) {
+            aud.pause();
+          } else {
+            aud.play();
+          }
+          isPlaying = !isPlaying;
+        }
+    </script>
+
     <header>
         <h1>
             Recipes
         </h1>
     </header>
+
+    <ul id = "contents">
+        <li><a href = "#Cookies">Double Chocolate Cookies</a></li>
+        <li><a href = "#TomatoAndEggs">Tomato and Eggs</a></li>
+        <li><a href = "#ChickenSandwich">Spicy Fried Chicken Sandwich</a></li>
+    </ul>
    
-    <main id = "main" class = "travel">
-    <div>
+    <main id = "main" class = "recipes">
+    <div id = "Cookies">
         <h2>Double Chocolate Cookies</h2>
 
         <div class = "description">
@@ -78,7 +106,7 @@
 
     </div>
 
-    <div>
+    <div id = "TomatoAndEggs">
             <h2>Tomato and Eggs</h2>
 
             <div class = "description">
@@ -118,7 +146,7 @@
             <!--By Alex Ni-->
     </div>
 
-    <div>
+    <div id = "ChickenSandwich">
         <h2>Spicy Fried Chicken Sandwich Recipe</h2>
 
         <div class = "description">

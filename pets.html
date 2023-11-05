@@ -20,12 +20,42 @@
             </ul>
         </nav>
 
+        <div id = "button">
+            <button id="playButton" onClick="playPause()">
+                <audio src="music/In_The_Peak_Bar.mp3" loop></audio>
+                Play/Pause Music
+            </button>
+        </div>
+
+        <script>
+            let aud = document.getElementById("playButton").children[0];
+            let isPlaying = false;
+            aud.pause();
+          
+            function playPause() {
+              if (isPlaying) {
+                aud.pause();
+              } else {
+                aud.play();
+              }
+              isPlaying = !isPlaying;
+            }
+        </script>
+
         <header> 
             <h1> Pets </h1>
         </header>
 
+        <ul id = "contents">
+            <li><a href = "#Basil">Basil</a></li>
+            <li><a href = "#Cooky">Cooky</a></li>
+            <li><a href = "#Bacon">Bacon Q Dog</a></li>
+            <li><a href = "#Hachi">Hachi</a></li>
+            <li><a href = "#Cooper">Cooper</a></li>
+        </ul>
+
         <main id = "main" class = "pets">
-            <div>     
+            <div id = "Basil">     
                 <h2>Basil</h2>
                 
                 <div class = "description">
@@ -46,10 +76,10 @@
 
                     <h3>Photo Gallery</h3>
                     <div class = "gallery">
-                        <div><img width="200" src="images/naruto_basil.png" alt="White bichon in a Naruto robe (Akatsuki)"></div>
-                        <div><img width="200" src="images/balloosil.png" alt="Balloon attached to white bichon"></div>
-                        <div><img width="200" src="images/pet_me.png" alt="White bichon leaning against leg"></div>
-                        <div><img width="200" src="images/superbasil_HOP.png" alt="White bichon floating in the air while running"></div>
+                        <div><img class = "left" width="200" src="images/naruto_basil.png" alt="White bichon in a Naruto robe (Akatsuki)"></div>
+                        <div><img class = "right" width="200" src="images/balloosil.png" alt="Balloon attached to white bichon"></div>
+                        <div><img class = "left" width="200" src="images/pet_me.png" alt="White bichon leaning against leg"></div>
+                        <div><img class = "right" width="200" src="images/superbasil_HOP.png" alt="White bichon floating in the air while running"></div>
                     </div>
 
                 <h3>Likes</h3>
@@ -62,7 +92,7 @@
             </div>
 
 
-            <div>
+            <div id = "Cooky">
                 <h2>Cooky</h2>
                 
                 <div class = "description">
@@ -87,10 +117,10 @@
                 
                 <h3>Photo Gallery</h3>
                 <div class = "gallery">
-                    <div><img width="200" src="images/cookytreat.jpg" alt="Cooky eating one of his favorite treats while lying on the ground"></div>
-                    <div><img width="200" src="images/cookytired.jpg" alt="Cooky tired laying on the ground"></div>
-                    <div><img width="200" src="images/cookycone.jpg" alt="Cooky with long hair sitting with a dog cone on his head"></div>
-                    <div><img width="200" src="images/cookyzoom.jpg" alt="Hachi enjoying human food"></div>
+                    <div><img class = "left" width="200" src="images/cookytreat.jpg" alt="Cooky eating one of his favorite treats while lying on the ground"></div>
+                    <div><img class = "right" width="200" src="images/cookytired.jpg" alt="Cooky tired laying on the ground"></div>
+                    <div><img class = "left" width="200" src="images/cookycone.jpg" alt="Cooky with long hair sitting with a dog cone on his head"></div>
+                    <div><img class = "right" width="200" src="images/cookyzoom.jpg" alt="Hachi enjoying human food"></div>
                 </div>
 
                 <h3>Likes</h3>
@@ -102,7 +132,7 @@
                 <!--Saicharan Vemuri -->
             </div>
             
-            <div>
+            <div id = "Bacon">
                 <h2>Bacon Q Dog</h2>
 
                 <div class = "description">
@@ -119,15 +149,15 @@
 
                     <h3>Photo Gallery</h3>
                     <div class = "gallery">
-                        <div><img src="images/bacon_bandana.JPG" width ="200" alt = "Brown labradoodle wearing an orange bandana"></div>
-                        <div><img src="images/bacon_graduation.JPG"  width ="200" alt="Small labradoodle puppy wearing a graduation cap and gown"></div>
+                        <div><img class = "left" src="images/bacon_bandana.JPG" width ="200" alt = "Brown labradoodle wearing an orange bandana"></div>
+                        <div><img class = "right" src="images/bacon_graduation.JPG"  width ="200" alt="Small labradoodle puppy wearing a graduation cap and gown"></div>
                         <div>
-                            <video width="200"  controls>
+                            <video class = "left" width="200"  controls>
                                 <source src="images/bacon_agility.mov">
                                 Your browser does not support the video tag.  This was a video of a girl and dog demonstrating a sit and stay procedure
                             </video>
                         </div>
-                        <div><img src="images/bacon_halloween.JPG"  width ="200" alt="Brown labradoodle wearing a pirate costume"></div>
+                        <div><img class = "right" src="images/bacon_halloween.JPG"  width ="200" alt="Brown labradoodle wearing a pirate costume"></div>
                     </div>
                 
 
@@ -140,7 +170,7 @@
                 <!-- Colleen van Lent -->
             </div>
 
-            <div>
+            <div id = "Hachi">
                 <h2>Hachi</h2>
 
                 <div class = "description">
@@ -164,12 +194,11 @@
 
                 <h3>Photo Gallery </h3>
                 <div class = "gallery">
-                    <div><img id="Hachi_sleeping" width="200" src="images/hachi_sleeping.jpg" alt="Hachi sleeping on the kitchen floor"></div>
-                    <div><img id="hachi_snow" width="200" src="images/hachi_snow.jpg" alt="Hachi playing in the snow"></div>
-                    <div><img id="Hachi_carride" width="200" src="images/hachi_carride.jpg" alt="Hachi going on a caride"></div>
-                    <div><img id="hachi_eating" width="200" src="images/hachi_eating.jpg" alt="Hachi enjoying human food"></div>
+                    <div><img class = "left" id="Hachi_sleeping" width="200" src="images/hachi_sleeping.jpg" alt="Hachi sleeping on the kitchen floor"></div>
+                    <div><img class = "right" id="hachi_snow" width="200" src="images/hachi_snow.jpg" alt="Hachi playing in the snow"></div>
+                    <div><img class = "left" id="Hachi_carride" width="200" src="images/hachi_carride.jpg" alt="Hachi going on a caride"></div>
+                    <div><img class = "right" id="hachi_eating" width="200" src="images/hachi_eating.jpg" alt="Hachi enjoying human food"></div>
                 </div>
-                
 
                 <h3>Likes</h3>
                 <ul>
@@ -180,7 +209,7 @@
                 <!--Matthew Sun -->
             </div>
 
-            <div>
+            <div id = "Cooper">
                 <h2>Cooper</h2>
                 
                 <div class = "description">
@@ -200,10 +229,10 @@
 
                 <h3>Photo Gallery</h3>
                 <div class = "gallery">
-                    <div><img id="cooper_closeup" width="200" src="images/cooper_closeup.JPG" alt="Border collie / lab mix putting his face close to the camera"></div>
-                    <div><img id="cooper_smiling" width="200" src="images/cooper_smiling.JPG" alt="Black and white colored dog smiling directly at the camera"></div>
-                    <div><img id="cooper_flowers" width="200" src="images/cooper_flowers.jpeg" alt="Border collie / lab mix sniffing a bouquet of flowers in the sun"></div>
-                    <div><img id="cooper_puppy" width="200" src="images/cooper_puppy.JPG" alt="Small border collie / lab mix puppy laying on the carpet"></div>
+                    <div><img class = "left" id="cooper_closeup" width="200" src="images/cooper_closeup.JPG" alt="Border collie / lab mix putting his face close to the camera"></div>
+                    <div><img class = "right" id="cooper_smiling" width="200" src="images/cooper_smiling.JPG" alt="Black and white colored dog smiling directly at the camera"></div>
+                    <div><img class = "left" id="cooper_flowers" width="200" src="images/cooper_flowers.jpeg" alt="Border collie / lab mix sniffing a bouquet of flowers in the sun"></div>
+                    <div><img class = "right" id="cooper_puppy" width="200" src="images/cooper_puppy.JPG" alt="Small border collie / lab mix puppy laying on the carpet"></div>
                 </div>
                     
                 <h3>Likes</h3>

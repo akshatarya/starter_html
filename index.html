@@ -18,14 +18,45 @@
         </ul>
     </nav>
 
+    <div id = "button">
+        <button id="playButton" onClick="playPause()">
+            <audio src="music/In_The_Peak_Bar.mp3" loop></audio>
+            Play/Pause Music
+        </button>
+    </div>
+
+    <script>
+        let aud = document.getElementById("playButton").children[0];
+        let isPlaying = false;
+        aud.pause();
+      
+        function playPause() {
+          if (isPlaying) {
+            aud.pause();
+          } else {
+            aud.play();
+          }
+          isPlaying = !isPlaying;
+        }
+    </script>
+    
     <header> 
         <h1>Travel </h1>
     </header>
 
+    <ul id = "contents">
+        <li><a href = "#Jasper">Jasper, Canada</a></li>
+        <li><a href = "#Sofia">Sofia, Bulgaria</a></li>
+        <li><a href = "#Singapore">Singapore</a></li>
+        <li><a href = "#Halong">Ha Long Bay, Vietnam</a></li>
+        <li><a href = "#Auckland">Auckland, New Zealand</a></li>
+        <li><a href = "#PaloAlto">Palo Alto, California</a></li>
+    </ul>
+
     <main id = "main" class = "travel">
-        <div>
+        <div id = "Jasper">
             <h2>Jasper, Canada</h2>
-            <img class = "thumbnail gif" src = "images/spirit_island.gif" alt = "gif of Island in the middle of Lake" width = "400">
+            <img class = "thumbnail gif"  src = "images/spirit_island.gif" alt = "gif of Island in the middle of Lake" width = "400">
             <img class = "thumbnail still_image" src="images/spirit_island.jpg" alt="Island in the middle of Lake" width="400">
             
             <p>Spirit island, located in the heart of Maligne Lake, Jasper was a spiritual place of healing for the rocky mountain tribe for over 2000 years before they were displaced in the 1900s. They believed that each mountain with a face in the hall of the gods (the mountains in front of spirit island) contains the essence of each god of each religion as well as all notable rocky mountain tribesmen.</p>
@@ -43,7 +74,7 @@
         <!-- Lorenzo Lupano, Mudit Johar, and Akshat Arya -->
         </div>
         
-        <div>
+        <div id = "Sofia">
             <h2>Sofia, Bulgaria</h2>
             <img class = "thumbnail gif" src="images/Sofia_Bulgaria.gif" alt="gif of Sofia, Bulgaria" width="400">
             <img class = "thumbnail still_image" src="images/Sofia_Bulgaria.png" alt="Sofia, Bulgaria" width="400">
@@ -63,7 +94,7 @@
         <!--Alyna Petrov-->
         </div>
         
-        <div>
+        <div id = "Singapore">
             <h2>Singapore</h2>
             <img class = "thumbnail gif" src="images/singapore.GIF" alt="gif of Singapore" width="400">
             <img class = "thumbnail still_image" src="images/singapore.jpeg" alt="Singapore skyline" width="400">
@@ -83,7 +114,7 @@
         <!--Lily Gong and Alexandra Tan-->
         </div>
         
-        <div>
+        <div id = "Halong">
             <h2>Ha Long Bay, Vietnam</h2>
             <img class = "thumbnail gif" src="images/Halong_Bay.gif" alt="gif of Ha Long Bay" width="400">
             <img class = "thumbnail still_image" src="images/Halong_Bay.jpeg" alt="Boats in Ha Long Bay" width="400">
@@ -103,7 +134,7 @@
         <!-- Zachary Granados -->
         </div>
         
-        <div>
+        <div id = "Auckland">
             <h2>Auckland, New Zealand</h2>
             <img class = "thumbnail gif" src="images/Auckland_Primary_Gif.gif" alt="gif of Auckland" width="400">
             <img class = "thumbnail still_image" src="images/Auckland_Primary_Image.jpg" alt="Auckland harbor and skyline" width="400">
@@ -123,7 +154,7 @@
         <!--Satyak Khare-->
         </div>
 
-        <div>
+        <div id = "PaloAlto">
             <h2>Palo Alto, CA</h2>
             <img class = "thumbnail gif" src="images/paloalto_oval.gif" alt="gif of Palo Alto Oval" width="400">
             <img class = "thumbnail still_image" src="images/paloalto_oval.JPG" alt="Palo Alto Oval" width="400">

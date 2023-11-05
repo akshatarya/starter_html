@@ -7,6 +7,15 @@
     }
 }
 
+@keyframes fade_out{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
 body{
     background-color: #00bf7d;
     color: black;
@@ -93,7 +102,7 @@ nav > ul{
 .current{
     padding: 20px;
     color: black;
-    background-color: aliceblue;
+    background-color: white;
     border-radius: 20px;
 }
 
@@ -137,6 +146,20 @@ ol{
     display: none;
 }
 
+#button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    background-color: black;
+    color: white;
+}
+
+#contents{
+    display: none;
+}
+
 @media (prefers-reduced-motion: reduce){
     body{
         animation: none;
@@ -150,6 +173,13 @@ ol{
 }
 
 @media only screen and (min-width: 600px){
+    nav{
+        position: sticky;
+        top: 0;
+        background-color: #00bf7d;
+        opacity: 0.9;
+    }
+
      nav > ul{
         font-size: 30px;
     }
@@ -198,5 +228,13 @@ ol{
     .description > div > p{
         grid-column: 2/-1;
         margin-right: 12px;
+    }
+
+    #button > button{
+        font-size: 30px;
+    }
+
+    #contents{
+        display: block;
     }
 }
